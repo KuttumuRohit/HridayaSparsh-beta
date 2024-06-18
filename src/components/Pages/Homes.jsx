@@ -1,9 +1,12 @@
 import React from 'react'
 import Card from '../Card'
+
 export const Homes = () => {
   return (
-    <div>
+    <div style={{backgroundColor:'rgb(75,93,254)'}}>
+      
      <Card></Card>
+     
     </div>
   )
 }

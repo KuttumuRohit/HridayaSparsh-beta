@@ -33,20 +33,20 @@ const Card = () => {
   ];
 
   return (
-    <section className="parent-section grid lg:grid-cols-2 gap-6 px-4 py-8">
+    <section className="parent-section grid lg:grid-cols-2 gap-8 px-8 py-4"> {/* Adjusted px-2 and gap-4 for smaller spacing */}
       {cards.map((card, index) => (
         <div
           key={index}
-          className="card flex flex-col lg:flex-row rounded-lg bg-slate-200 p-4 mb-5"
+          className="card flex flex-col lg:flex-row rounded-lg bg-slate-200 p-2 mb-4" // Adjusted mb-5 to mb-4 for smaller margin
         >
           <img
             src={card.imgSrc}
-            className="thumbnail rounded-lg mb-4 lg:mb-0 lg:mr-4 object-cover h-[300px] w-[400px]"
+            className="thumbnail rounded-lg mb-4 lg:mb-0 lg:mr-4 object-cover h-[300px] w-[100%] lg:w-[400px]" // Adjusted width to fit content
             alt="img"
           />
           <div className="flex flex-col justify-between flex-grow">
-            <div className="top font-bold text-xl mb-2">{card.title}</div>
-            <div className="middle flex-grow font-semibold text-gray-700 text-base mb-4">
+            <div className="top font-bold text-lg mb-2 lg:text-xl">{card.title}</div> {/* Adjusted text size */}
+            <div className="middle font-normal text-gray-700 text-sm lg:text-base mb-4"> {/* Adjusted text size */}
               {card.text}
             </div>
             <a
